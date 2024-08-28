@@ -1,0 +1,31 @@
+header {
+  text-align: center;
+  background-color: rgb(8, 174, 230);
+  text-overflow: ellipsis;
+}
+h2 {
+  color: rgb(208, 255, 0);
+}
+p {
+  color: chartreuse;
+}
+.first {
+  background-color: brown;
+}
+.second {
+  color: aqua;
+  background-color: rgb(232, 13, 86);
+}
+a {
+  color: rgb(178, 13, 123);
+}
+a:hover {
+  background-color: rgb(9, 206, 36);
+  font-size: 130%;
+}
+img:hover {
+  zoom: 150%;
+}
+footer {
+  background: #000;
+}
