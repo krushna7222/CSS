@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct Child Element</title>
+    <style>
+      div > p {
+        color: rgb(5, 5, 101);
+      }
+      div > span {
+        color: rgb(0, 255, 42);
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Working With The Direct Child Combinator Selector</h2>
+    <hr />
+    <div>
+      <p>I am direct child Paragraph</p>
+      <span>
+        <p>i am grand child paragraph</p>
+        <span
+          >I am Grand child span
+          <p>I am Great grand child Paragraph</p>
+        </span>
+      </span>
+      <p>I am Direct child Paragraph</p>
+    </div>
+    <p></p>
+  </body>
+</html>

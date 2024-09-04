@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element Selector</title>
+    <style>
+        p::first-line{
+            background-color: yellow;
+        }
+
+        p::first-letter{
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        ::marker{
+            color: rgb(0, 255, 21);
+        }
+
+        p::before{
+            content: " This Line Written in before ";
+            color: red;
+            background-color: aqua;
+
+        }
+
+        p::after{
+            content: "This Line Written in after ";
+            color: rgb(51, 0, 255);
+            background-color: rgb(188, 127, 245);
+            
+        }
+
+        ::selection{
+         color: rgb(234, 11, 11);
+         background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Working With Pseudo Element</h2>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos inventore consequatur, quidem accusantium minima repellat similique iusto delectus aliquam nulla obcaecati sequi recusandae provident unde qui, vero blanditiis, animi ipsam illo accusamus minus optio architecto aliquid nisi? Aut voluptate quia ducimus autem delectus earum cum, accusantium deleniti sunt perferendis asperiores illum. Provident distinctio molestias ratione. Veritatis maiores nemo ea reiciendis vero cum autem unde corrupti quasi reprehenderit a dolores, fuga ipsam expedita, obcaecati doloremque officiis voluptates, explicabo repudiandae eveniet! Aut repellat vel facilis possimus, harum, sapiente odit natus sunt, sit nobis ab sint! Tempore, laudantium! Fuga, optio sit. Ratione, blanditiis.</p><hr>
+    <p>
+        <ul>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, incidunt.</li>
+            <li>Lorem ipsum dolor, sit amet consectetur adipisicing.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati sunt eveniet tempora!</li>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+        </ul>
+    </p>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate labore aut a aspernatur quia? Ex exercitationem quisquam vel voluptate tenetur facere vero dignissimos, consectetur nesciunt necessitatibus mollitia atque alias, porro dolorem enim quos consequatur saepe ipsam fugiat, harum similique ratione. Quidem dolore corporis reiciendis perferendis iusto nesciunt error est quis cumque tenetur, dicta similique modi distinctio aspernatur quas cum quaerat in optio nisi totam hic excepturi eveniet ex? Vel natus id officia obcaecati rem optio, ratione explicabo tempora amet asperiores reiciendis iste accusantium nam exercitationem aliquid quod rerum? Quos atque amet enim impedit hic libero, labore, praesentium nesciunt perspiciatis deleniti unde, debitis ducimus accusamus ipsa! Porro officia voluptas corrupti numquam voluptatum tempore vero similique nobis illum, accusantium pariatur, repudiandae facere distinctio quis itaque ad cumque expedita cupiditate doloremque sit? Suscipit sed, tempora quod iusto aut, optio nisi, quisquam minima ut quo alias minus. Numquam, voluptatum! Deserunt asperiores obcaecati totam necessitatibus dolore enim, earum praesentium, consequatur veniam deleniti nesciunt voluptatem rem doloremque eos eum amet cum. Exercitationem natus veniam perspiciatis ex cumque iure et nisi sed eum accusantium eligendi saepe quibusdam est nobis, veritatis nihil itaque, consequuntur iste odio hic. Deleniti alias dolorum sunt atque! Provident, ea enim! Tenetur, soluta at.</p>
+    
+</body>
+</html>
