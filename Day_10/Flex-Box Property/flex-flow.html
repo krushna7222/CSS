@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">Item
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX-FLOW</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap; /* this property will allow the flex items to wrap onto a new line */
+            border: 1px solid rgb(117, 117, 117);
+            background-color: rgb(35, 148, 101);
+            flex-flow: row-reverse wrap;
+        }
+        .container>div{
+            border: 1px solid rgb(173, 42, 42);
+            background-color: blue;
+            width: 50px;
+            height: 30px;
+            margin: 10px;
+            
+        }
+    
+    </style>
+</head>
+<body>
+    <h2>Working With Flex-Wrap</h2>
+    <hr>
+    <div class="container">
+        <div >Item 1</div>
+        <div  style="flex-grow: 3;">Item 2</div>
+        <div style="flex-grow: 2;">Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+        <div>Item 7</div>
+        <div>Item 8</div>
+        <div>Item 9</div>
+        <div>Item 10</div>
+    </div>
+    </html>
+    
+</body>

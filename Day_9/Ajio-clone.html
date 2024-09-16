@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJIO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        display: flex;
+        height: 90px;
+        background-color: white;
+      }
+      .shaddow {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      }
+      .navlogo {
+        padding-top: 20px;
+        width: 30%;
+      }
+      #logo {
+        margin-left: 150px;
+        margin-top: 7px;
+        width: 130px;
+        height: 38px;
+      }
+      .menu {
+        width: 40%;
+        margin-top: 60px;
+      }
+      ul,
+      a {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        color: black;
+        font-family: "Source Code Pro", monospace;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+      a:hover {
+        font-weight: 700;
+      }
+      #search,
+      .icons {
+        border: 1px solid #2c4152;
+        border-radius: 17px;
+        padding: 0 20px 0 12px;
+        width: 300px;
+        height: 34px;
+        font-size: 14px;
+        margin-top: 50px;
+      }
+      .right-nav {
+        display: flex;
+        justify-content: space-evenly;
+        width: 10%;
+      }
+      .icon {
+        font-size: 25px;
+        color: rgb(7, 11, 31);
+        margin-top: 45px;
+      }
+
+      #banner,
+      .banner {
+        display: block;
+        width: 100%;
+        height: 390px;
+        background-color: rgb(245, 248, 249);
+      }
+      #bannerbottom,
+      .bannerbottom {
+        display: block;
+        width: 100%;
+        height: 95px;
+        background-color: rgb(245, 248, 249);
+      }
+      section {
+        margin-top: 10px;
+        display: flex;
+        height: 570px;
+        background-color: rgb(245, 248, 249);
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .item {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+      img {
+        height: 400px;
+        width: 280px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      h3 {
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: rgb(151, 35, 201);
+      }
+      span {
+        margin-top: 5px;
+        font-size: 20px;
+        color: rgb(5, 109, 17);
+        display: block;
+        text-align: center;
+      }
+      p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: rgb(7, 11, 31);
+        display: block;
+        text-align: center;
+      }
+
+      /* CSS For Footer */
+      footer {
+        background-color: rgb(44, 65, 82);
+        padding-top: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: 350px;
+        color: #cccccc;
+        text-align: center;
+      }
+      .footer {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(44, 65, 82);
+      }
+      .foot {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        color: #cccccc;
+      }
+      .foot > li a {
+        margin: 10px 10px;
+        display: flex;
+        color: #cccccc;
+        font-size: 12px;
+      }
+      .hr {
+        margin: 0;
+        border-top: 1px solid #cccccc;
+        height: 1px;
+      }
+      .pay-method {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(44, 65, 82);
+      }
+
+      .lora {
+        font-family: "Lora", serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: #cccccc;
+        margin: 10px 20px 20px 20px;
+      }
+      .payment-logos {
+        display: flex;
+      }
+      .paylogo,
+      .fa-brand {
+        margin-top: 20px;
+        margin-right: 50px;
+        height: 30px;
+        width: 40px;
+      }
+      .fa-brands {
+        font-size: 50px;
+        margin-right: 30px;
+        color: #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar shaddow">
+        <div class="navlogo">
+          <img src="/Images/Ajio-Logo.svg" alt="Logo" id="logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">BEAUTY</a></li>
+            <li><a href="#">HOME AND KITCHEN</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <input type="search" name="" id="search" placeholder="Search AJIO" />
+          <span>
+            <i class="fa-solid fa-magnifying-glass icons"></i>
+          </span>
+        </div>
+        <div class="right-nav">
+          <span><i class="fa-solid fa-heart icon"></i></span>
+          <span><i class="fa-solid fa-bag-shopping icon"></i></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner shaddow">
+        <img src="/Images/Ajio/top.avif" alt="" id="banner" />
+      </section>
+      <section>
+        <div class="container shaddow">
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img6.jpeg" alt="" />
+            <h3>MEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 44% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img2.jpeg" alt="" />
+            <h3>WOMEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 50% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img3.jpeg" alt="" />
+            <h3>WATCH</h3>
+            <span><strong>Starting at ₹999</strong></span>
+            <p><strong>Min 45% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img4.jpeg" alt="" />
+            <h3>MOBILE</h3>
+            <span><strong>Starting at ₹5999</strong></span>
+            <p><strong>Min 19% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img5.jpeg" alt="" />
+            <h3>KITCHEN</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container shaddow">
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img7.jpeg" alt="" />
+            <h3>KIDS</h3>
+            <span><strong>Starting at ₹699</strong></span>
+            <p><strong>Min 25% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img8.jpeg" alt="" />
+            <h3>BEUTY PRODUCT</h3>
+            <span><strong>Starting at ₹59</strong></span>
+            <p><strong>Min 35% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img9.jpeg" alt="" />
+            <h3>SHOE</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img12.jpeg" alt="" />
+            <h3>SUN-GLASSES</h3>
+            <span><strong>Starting at ₹299</strong></span>
+            <p><strong>Min 70% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img10.jpeg" alt="" />
+            <h3>STATIONARY</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 40% OFF</strong></p>
+          </div>
+        </div>
+      </section>
+      <section class="banner shaddow">
+        <img src="/Images/Ajio/bottom.avif" alt="" id="banner" />
+      </section>
+      <section class="bannerbottom shaddow">
+        <img src="/Images/Ajio/bottom1.webp" alt="" id="bannerbottom" />
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <div class="foot">
+          <h4 class="lora">Ajio</h4>
+          <ul class="foot">
+            <li><a href="#">Who We Are</a></li>
+            <li><a href="#">Join Our Team</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">We Respect Your Privacy</a></li>
+            <li><a href="#">Fees & Payment</a></li>
+            <li><a href="#">Return And Refund Policy</a></li>
+            <li><a href="#">Promotions Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="foot">
+          <h4 class="lora">Help</h4>
+          <ul class="foot">
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Frequently Asked Questions</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">Cancellations</a></li>
+            <li><a href="#">Payments</a></li>
+            <li><a href="#">Customer Care</a></li>
+            <li><a href="#">How Do I Redeem My Coupon</a></li>
+          </ul>
+        </div>
+        <div class="foot">
+          <h4 class="lora">Shop by</h4>
+          <ul class="foot">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">IndieStores</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Brand</a></li>
+            <li><a href="#">Payment Options</a></li>
+            <li><a href="#">Directory</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Collections</a></li>
+          </ul>
+        </div>
+        <div class="foot">
+          <h4 class="lora">Follow us</h4>
+          <div class="social-media">
+            <ul class="foot">
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Instagram- AJIOlife</a></li>
+              <li><a href="#">Instagram- AJIO LUXE</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Pinterest</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="hr">
+        <hr />
+      </section>
+      <section class="pay-method">
+        <h4 class="lora">Payment Methods</h4>
+        <div class="payment-logos">
+          <span class="paylogo"></span>
+          <span class="paylogo"><i class="fa-brands fa-cc-visa"></i></span>
+          <span class="paylogo"
+            ><i class="fa-brands fa-cc-mastercard"></i
+          ></span>
+          <span class="paylogo"></span>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJIO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        display: flex;
+        height: 90px;
+        background-color: white;
+      }
+      .shaddow {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      }
+      .navlogo {
+        padding-top: 20px;
+        width: 20%;
+      }
+      #logo {
+        margin-left: 5px;
+        width: 130px;
+        height: 38px;
+      }
+      .menu {
+        width: 50%;
+        margin-top: 60px;
+      }
+      ul,
+      a {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        text-decoration: none;
+        color: black;
+      }
+      #search {
+        border: 1px solid #2c4152;
+        border-radius: 17px;
+        padding: 0 20px 0 12px;
+        width: 270px;
+        height: 34px;
+        font-size: 14px;
+        margin-top: 50px;
+      }
+      .right-nav {
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+      }
+      .icon {
+        font-size: 25px;
+        margin-left: 10px;
+        color: rgb(7, 11, 31);
+        margin-top: 50px;
+      }
+      section {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        height: 470px;
+        background-color: rgb(173, 192, 201);
+      }
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .item {
+        width: 25%;
+        /* padding: 10px; */
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(200, 200, 200, 0.5);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .item1 {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar shaddow">
+        <div class="navlogo">
+          <img src="/Images/Ajio-Logo.svg" alt="Logo" id="logo" />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">BEAUTY</a></li>
+            <li><a href="#">HOME AND KITCHEN</a></li>
+          </ul>
+        </div>
+        <div class="right-nav">
+          <input type="search" name="" id="search" placeholder="Search AJIO" />
+          <span><i class="fa-solid fa-heart icon"></i></span>
+          <span><i class="fa-solid fa-bag-shopping icon"></i></span>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="item1">
+          <img src="/Images/Ajio/section1.avif" alt="" width="1530px" />
+        </div>
+        <div class="item">
+          <img src="/Images/ajioimg1.avif" alt="" />
+        </div>
+        <div class="item">
+          <img src="/Images/ajioimg2.avif" alt="" />
+        </div>
+        <div class="item">
+          <img src="/Images/ajioimg3.avif" alt="" />
+        </div>
+        <div class="item">
+          <img src="/Images/ajioimg4.webp" alt="" />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

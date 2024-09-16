@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Wrap</title>
+    <style>
+        .outerdiv{
+            display: flex;
+            flex-wrap: wrap; /* this property will allow the flex items to wrap onto a new line */
+            border: 1px solid rgb(117, 117, 117);
+            background-color: rgb(0, 0, 0);
+        }
+        div{
+            margin: 10px;
+            background-color: bisque;
+            border: 1px solid black;
+        }
+        
+        .childdiv{
+            margin-left: 10px;
+            border:1px solid black;
+            background-color: aqua;
+            padding: 5px;
+        }
+        /* .outerdiv>div{
+            display: flex;
+            flex-wrap: wrap; /* this property will allow the flex items to wrap onto a new line */
+            /* border: 1px solid rgb(117, 117, 117);
+            background-color: rgb(86, 73, 73);
+        } */ 
+        
+    </style>
+</head>
+<body>
+    <h2>Working With Flex-Wrap</h2>
+    <hr>
+    <div class="outerdiv">
+        <div class="childdiv">DIV1</div>
+        <div class="childdiv">DIV2</div>
+        <div class="childdiv">DIV3</div>
+        <div class="childdiv">DIV4</div>
+        <div class="childdiv">DIV5</div>
+        <div class="childdiv">DIV6</div>
+        <div class="childdiv">DIV7</div>
+        <div class="childdiv">DIV8</div>
+        <div class="childdiv">DIV9</div>
+        <div class="childdiv">DIV10</div>
+        <div class="childdiv">DIV11</div>
+        <div class="childdiv">DIV12</div>
+        <div class="childdiv">DIV13</div>
+        <div class="childdiv">DIV14</div>
+        <div class="childdiv">DIV15</div>
+    </div>
+    <div class="outerdiv">
+        <div>DIV1</div>
+        <div>DIV2</div>
+        <div>DIV3</div>
+        <div>DIV4</div>
+        <div>DIV5</div>
+        <div>DIV6</div>
+        <div>DIV7</div>
+        <div>DIV8</div>
+        <div>DIV9</div>
+        <div>DIV10</div>
+        <div>DIV11</div>
+        <div>DIV12</div>
+        <div>DIV13</div>
+        <div>DIV14</div>
+        <div>DIV15</div>
+    </div>
+    
+    </html>
+    
+</body>
