@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajio-Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .shaddow {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      }
+      header {
+        width: 100%;
+        height: 90px;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        width: 90%;
+        height: 55px;
+        margin-left: 5%;
+        position: relative;
+      }
+      #logo {
+        width: 130px;
+        height: 38px;
+        margin-bottom: 10px;
+      }
+      .menu > ul {
+        margin-left: 150px;
+      }
+       ul {
+        list-style-type: none;
+        display: flex;
+        font-family: "Source Code Pro", monospace;
+      }
+      .menu>ul >li> a {
+        text-decoration: none;
+        color: black;
+        padding: 0px 16px;
+      }
+
+      .menu>ul >li>a:hover {
+        font-weight: 600;
+      }
+      #search {
+        border: none;
+        font-size: 14px;
+      }
+      .search {
+        align-items: center;
+        border: 1px solid rgb(127, 127, 127);
+        border-radius: 17px;
+        background-color: rgb(255, 253, 237);
+        height: 34px;
+        width: 270px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 0px;
+      }
+      .icons {
+        margin-left: 15px;
+        color: rgb(255, 255, 255);
+        background-color: #2c4152;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .icon{ 
+         display: flex;
+      }
+
+      i {
+        padding: 7px;
+        color: rgb(105, 105, 105);
+      }
+      .upper {
+        width: 90%;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+      .upperul>li>a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: black;
+      }
+      #blackupper {
+        color: white;
+        background-color: black;
+        height: 10px;
+      }
+
+      /* Mega Menu */
+      
+
+      .megamenu{
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        flex-wrap: wrap;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: space-around;
+        transition:0.5s;
+         
+      }
+      .megamenu-item{
+        flex-basis: 33%;
+      }
+      .megamenu-item>ul{
+        display: block;
+        padding-top: 5px;
+        font-family: "Source Code Pro";
+        font-weight: 400;
+        
+      }
+      .megamenu-item>h3{
+        font-size: 14px;
+        font-family: "Source Code Pro";
+        font-weight: 700;
+        text-decoration: none solid rgb(44, 65, 82);
+        margin-top: 10px;
+      }
+ 
+     
+      .megamenu-item>ul>li>a{
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+        color: rgb(44, 65, 82);
+      }
+      .megamenu-item>ul>li>a:hover{
+        font-weight: 500;
+        text-decoration: underline;
+      }
+      .menu>ul>li:hover .megamenu{
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* main section */
+      .top {
+        margin: 93px;
+        width: 100vw;
+      }
+      section {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(245, 248, 249);
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .item {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 24%;
+        transition: transform 0.6s;
+      }
+
+      .item:hover {
+        transform: scale(1.04);
+      }
+
+      img {
+        height: 400px;
+        width: 100%;
+      }
+
+      .item>h3 {
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: rgb(151, 35, 201);
+      }
+      span {
+        margin-top: 5px;
+        font-size: 20px;
+        color: rgb(5, 109, 17);
+        display: block;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: rgb(7, 11, 31);
+        display: block;
+        text-align: center;
+      }
+
+      .banner1 {
+        margin-top: 90px;
+      }
+      #banner,
+      .banner {
+        display: block;
+        width: 100%;
+        height: 390px;
+        background-color: rgb(245, 248, 249);
+      }
+      #bannerbottom,
+      .bannerbottom {
+        display: block;
+        width: 100%;
+        height: 95px;
+        background-color: rgb(245, 248, 249);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shaddow">
+      <div class="upper">
+        <ul class="upperul">
+          <li><a href="">Sign In / Join AJIO</a></li>
+          <li><a href="">Customer Care</a></li>
+          <li><a href="" id="blackupper">Visit AJIUOLUXE</a></li>
+        </ul>
+      </div>
+      <nav>
+        <div class="logo">
+          <img
+            id="logo"
+            src="/Day_14/Assignment/image/Ajio-Logo.svg"
+            alt="Logo"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">MEN</a>
+            <div class="megamenu shaddow">
+                <div class="megamenu-item" >
+                    <h3>WESTERN WEAR</h3>
+                    <ul>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Short & 3/4ths</a></li>
+                        <li><a href="#">Sweatshirts & Hoodies</a></li>
+                        <li><a href="#">Track Pants</a></li>
+                        <li><a href="#">Trousers & Pants</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>FOOTEWARE</h3>
+                    <ul>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">Flip Flop & Slippers</a></li>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">sandals</a></li>
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Sports Shoes</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>ACCESSORIES</h3>
+                    <ul>
+                        <li><a href="#">Backpacks</a></li>
+                        <li><a href="#">Bags & Wallets</a></li>
+                        <li><a href="#">Belts</a></li>
+                        <li><a href="#">Caps & Hats</a></li>
+                        <li><a href="#">Fashion Accessories</a></li>
+                        <li><a href="#">Luggage & Trolleys</a></li>
+                        <li><a href="#">Socks</a></li>
+                        <li><a href="#">Sunglasses & Frames</a></li>
+                        <li><a href="#">Watches</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>PRECIOUS JEWELLERY</h3>
+                    <ul>
+                      <li><a href="#">Gold And Silver Coins</a></li>
+                      <li><a href="#">Gold And Dimond Jewellery</a></li>
+                      <li><a href="#">Silver Jewellery</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FEATURED</h3>
+                    <ul>
+                        <li><a href="#">Bags Under 1499</a></li>
+                        <li><a href="#">Footwear Under 1499</a></li>
+                        <li><a href="#">Jeans Under 1499</a></li>
+                        <li><a href="#">Short & 3/4ths Under 1499</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FESTIVE EDITS</h3>
+                    <ul>
+                        <li><a href="#">Diwali Kurtas</a></li>
+                        <li><a href="#">Dhotis</a></li>
+                        <li><a href="#">Readymade Dhotis</a></li>
+                        <li><a href="#">Ramraj Dhotis</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            </li>
+            <li><a href="#">WOMEN</a>
+              <div class="megamenu shaddow">
+                <div class="megamenu-item" >
+                    <h3>ETHNIC WEAR</h3>
+                    <ul>
+                        <li><a href="#">Kurtas</a></li>
+                        <li><a href="#">Dress Material</a></li>
+                        <li><a href="#">Salwars & Churidars</a></li>
+                        <li><a href="#">Sarees</a></li>
+                        <li><a href="#">Dupattas</a></li>
+                        <li><a href="#">Kurta Suit Sets</a></li>
+                        <li><a href="#">Blouses</a></li>
+                        <li><a href="#">Leggings</a></li>
+                        <li><a href="#">Skirts & Ghagras</a></li>
+                        <li><a href="#">Shawls & Wraps</a></li>
+                        <li><a href="#">Palazzos & Culottes</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>WESTEN WEAR</h3>
+                    <ul>
+                        <li><a href="#">Tops </a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Jeans & Jegging</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Trousers & Pants</a></li>
+                        <li><a href="#">Shitrs</a></li>
+                        <li><a href="#">Track Pants</a></li>
+                        <li><a href="#">Skirts & Shorts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Jumpsuits & Playsuits</a></li>
+                        <li><a href="#">Shrugs & Hoodies</a></li>
+                        <li><a href="#">Sweatshirts & Hoodies</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>JEWELLERY</h3>
+                    <ul>
+                        <li><a href="#">Gold And Silver Coins</a></li>
+                        <li><a href="#">Gold And Dimond Jewellery</a></li>
+                        <li><a href="#">Silver Jewellery</a></li>
+                        <li><a href="#">Fashion Jewellery</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>ACCESSORIES</h3>
+                    <ul>
+                        <li><a href="#">Sunglasses & Frames</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Bag,Belt And Wallet</a></li>
+                        <li><a href="#">Stoles And Scarves</a></li>
+                        <li><a href="#">Socks And Stocking</a></li>
+                        <li><a href="#">Caps</a></li>
+                        <li><a href="#">Luggage & Trolleys</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FOOTWERE</h3>
+                    <ul>
+                        <li><a href="#">Casual Shoes</a></li>
+                        <li><a href="#">Flat Sandals</a></li>
+                        <li><a href="#">Sport Shoes</a></li>
+                        <li><a href="#">Flip Flop & Slippers</a></li>
+                        <li><a href="#">Heeles Sandals</a></li>
+                        <li><a href="#">Heeles Shoes</a></li>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Woodland</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FESTIVE EDITS</h3>
+                    <ul>
+                        <li><a href="#">Kerala Sarees</a></li>
+                        <li><a href="#">Diwali Sarres</a></li>
+                        <li><a href="#">Diwali Dresses</a></li>
+                    </ul>
+                    
+                </div>
+            </div>  
+            </li>
+            <li><a href="#">KIDS</a>
+              <div class="megamenu shaddow">
+                <div class="megamenu-item" >
+                    <h3>BOYS</h3>
+                    <ul>
+                        <li><a href="#">Denims & Trousers</a></li>
+                        <li><a href="#">Joggers & Track Pants</a></li>
+                        <li><a href="#">Outware</a></li>
+                        <li><a href="#">Shirt</a></li>
+                        <li><a href="#">Shorts & 3/4ths</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>Shop BY AGE</h3>
+                    <ul>
+                        <li><a href="#">0 To 2 Years</a></li>
+                        <li><a href="#">2 To 5 Years</a></li>
+                        <li><a href="#">5 To 8 Years</a></li>
+                        <li><a href="#">8 To 12 Years</a></li>
+                        <li><a href="#">12 Years And Above</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>TOYS AND BABYCARES</h3>
+                    <ul>
+                        <li><a href="#">Action-Figurine & Collectibles</a></li>
+                        <li><a href="#">Creative & Educational Toys</a></li>
+                        <li><a href="#">Gaming,Robots & vehicles</a></li>
+                        <li><a href="#">Infants Toys</a></li>
+                        <li><a href="#">Role & Pretend Play</a></li>
+                        <li><a href="#">School,Party Supplies & Books</a></li>
+                        <li><a href="#">Soft Toys</a></li>
+                        <li><a href="#">Toys-Guns & Accessories</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>GIRLS</h3>
+                    <ul>
+                        <li><a href="#">Dresses & Frocks</a></li>
+                        <li><a href="#">Jeans & Jegging</a></li>
+                        <li><a href="#">Leggings</a></li>
+                        <li><a href="#">Outewear</a></li>
+                        <li><a href="#">Skirts & Shorts</a></li>
+                        <li><a href="#">Tops & T-Shirts</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FEATURED BRANDS</h3>
+                    <ul>
+                        <li><a href="#">Crocs</a></li>
+                        <li><a href="#">MINI KLUB</a></li>
+                        <li><a href="#">Gini & Jony</a></li>
+                        <li><a href="#">Hamleys</a></li>
+                        <li><a href="#">Mothecare</a></li>
+                        <li><a href="#">Marks & Spencer</a></li>
+                        <li><a href="#">Pepe Jeans</a></li>
+                        <li><a href="#">Peppermint</a></li>
+                        <li><a href="#">UCB Kids</a></li>
+                        <li><a href="#">U.S.P.A. Kids</a></li>
+                        <li><a href="#">MILA BABY</a></li>
+                        <li><a href="#">Adidas Kids</a></li>
+                        <li><a href="#">Lee Cooper</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FESTIVE EDITS</h3>
+                    <ul>
+                        <li><a href="#">Boys Diwali Dress</a></li>
+                        <li><a href="#">Girls Diwali Dress</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+          </li>
+            <li><a href="#">BEAUTY</a>
+              <div class="megamenu shaddow">
+                <div class="megamenu-item" >
+                    <h3>WESTERN WEAR</h3>
+                    <ul>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Sweatshirts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>FOOTEWARE</h3>
+                    <ul>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Sport Shoes</a></li>
+                        <li><a href="#">sandals</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Footwear Accessories</a></li>
+                        <li><a href="#">Sports & Outdoor</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>ACCESSORIES</h3>
+                    <ul>
+                        <li><a href="#">Fragrances</a></li>
+                        <li><a href="#">Hair & Beauty</a></li>
+                        <li><a href="#">Perfumes</a></li>
+                        <li><a href="#">Makeup & Skin Care</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Fragrances</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FEATURED</h3>
+                    <ul>
+                        <li><a href="#">Smart Home & Security</a></li>
+                        <li><a href="#">Electronics & Gadgets</a></li>
+                        <li><a href="#">Watches & Accessories</a></li>
+                        <li><a href="#">Health & Fitness</a></li>
+                        <li><a href="#">Baby & Kids</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FESTIVE EDITS</h3>
+                    <ul>
+                        <li><a href="#">Summer Sale</a></li>
+                        <li><a href="#">Winter Sale</a></li>
+                        <li><a href="#">Easter Sale</a></li>
+                        <li><a href="#">Holi Sale</a></li>
+                        <li><a href="#">Diwali Sale</a></li>
+                        <li><a href="#">Christmas Sale</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+          </li>
+            <li><a href="#">HOME AND KITCHEN</a>
+              <div class="megamenu shaddow">
+                <div class="megamenu-item" >
+                    <h3>WESTERN WEAR</h3>
+                    <ul>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Jeans</a></li>
+                        <li><a href="#">Sweatshirts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                    </ul>
+                </div>
+                <div class="megamenu-item" >
+                    <h3>FOOTEWARE</h3>
+                    <ul>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Sport Shoes</a></li>
+                        <li><a href="#">sandals</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Footwear Accessories</a></li>
+                        <li><a href="#">Sports & Outdoor</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>ACCESSORIES</h3>
+                    <ul>
+                        <li><a href="#">Fragrances</a></li>
+                        <li><a href="#">Hair & Beauty</a></li>
+                        <li><a href="#">Perfumes</a></li>
+                        <li><a href="#">Makeup & Skin Care</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                        <li><a href="#">Fragrances</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FEATURED</h3>
+                    <ul>
+                        <li><a href="#">Smart Home & Security</a></li>
+                        <li><a href="#">Electronics & Gadgets</a></li>
+                        <li><a href="#">Watches & Accessories</a></li>
+                        <li><a href="#">Health & Fitness</a></li>
+                        <li><a href="#">Baby & Kids</a></li>
+                        <li><a href="#">Home & Garden</a></li>
+                    </ul>
+                </div>
+                    <div class="megamenu-item" >
+                    <h3>FESTIVE EDITS</h3>
+                    <ul>
+                        <li><a href="#">Summer Sale</a></li>
+                        <li><a href="#">Winter Sale</a></li>
+                        <li><a href="#">Easter Sale</a></li>
+                        <li><a href="#">Holi Sale</a></li>
+                        <li><a href="#">Diwali Sale</a></li>
+                        <li><a href="#">Christmas Sale</a></li>
+                    </ul>
+                    
+                </div>
+            </div>
+          </li>
+          </ul>
+        </div>
+        <div class="search">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search AJIO"
+          />
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="icon">
+          <span><i class="fa-solid fa-heart icons"></i></span>
+          <span><i class="fa-solid fa-bag-shopping icons"></i></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <section class="banner1 shaddow">
+            <img src="/Images/Ajio/top.avif" alt="" id="banner" />
+          </section>
+          <section>
+      <section>
+        <div class="container shaddow">
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img6.jpeg" alt="" />
+            <h3>MEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 44% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img2.jpeg" alt="" />
+            <h3>WOMEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 50% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img3.jpeg" alt="" />
+            <h3>WATCH</h3>
+            <span><strong>Starting at ₹999</strong></span>
+            <p><strong>Min 45% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img4.jpeg" alt="" />
+            <h3>MOBILE</h3>
+            <span><strong>Starting at ₹5999</strong></span>
+            <p><strong>Min 19% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img5.jpeg" alt="" />
+            <h3>KITCHEN</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img7.jpeg" alt="" />
+            <h3>KIDS</h3>
+            <span><strong>Starting at ₹699</strong></span>
+            <p><strong>Min 25% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img8.jpeg" alt="" />
+            <h3>BEUTY PRODUCT</h3>
+            <span><strong>Starting at ₹59</strong></span>
+            <p><strong>Min 35% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img9.jpeg" alt="" />
+            <h3>SHOE</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img12.jpeg" alt="" />
+            <h3>SUN-GLASSES</h3>
+            <span><strong>Starting at ₹299</strong></span>
+            <p><strong>Min 70% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img10.jpeg" alt="" />
+            <h3>STATIONARY</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 40% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img13.jpeg" alt="" />
+            <h3>LAPTOP</h3>
+            <span><strong>Starting at ₹25,999</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img14.jpeg" alt="" />
+            <h3>GYM ESSENTIALS</h3>
+            <span><strong>Starting at ₹399</strong></span>
+            <p><strong>Min 40% OFF</strong></p>
+          </div>
+        </div>
+      </section>
+      <section class="banner shaddow">
+        <img src="/Images/Ajio/bottom.avif" alt="" id="banner" />
+      </section>
+      <section class="bannerbottom shaddow">
+        <img src="/Images/Ajio/bottom1.webp" alt="" id="bannerbottom" />
+      </section>
+    </main>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <div class="megamenu shaddow">
+    <div class="megamenu-item" >
+        <h3>BED LINEN</h3>
+        <ul>
+            <li><a href="#">Bedsheets</a></li>
+            <li><a href="#">Bedding Sets</a></li>
+            <li><a href="#">Blanckets,Dohars & Quilts</a></li>
+            <li><a href="#">Comforters</a></li>
+            <li><a href="#">Bed Covers</a></li>
+            <li><a href="#">Mattress Protectirs</a></li>
+            <li><a href="#">Quilt & Duvet Covers</a></li>
+        </ul>
+    </div>
+    <div class="megamenu-item" >
+        <h3>HOME DECOR</h3>
+        <ul>
+            <li><a href="#">Wall Decor</a></li>
+            <li><a href="#">Wall Shelves</a></li>
+            <li><a href="#">Clocks</a></li>
+            <li><a href="#">Photo Frames</a></li>
+            <li><a href="#">Mirror</a></li>
+            <li><a href="#">Lamp,Diyas & Candle</a></li>
+            <li><a href="#">Home Fragnance</a></li>
+            <li><a href="#">Plants & Flowers</a></li>
+        </ul>
+    </div>
+        <div class="megamenu-item" >
+        <h3>BATH</h3>
+        <ul>
+            <li><a href="#">Bath Towel & Robes</a></li>
+            <li><a href="#">Hand & Face Towel</a></li>
+            <li><a href="#">Towel Sets</a></li>
+            <li><a href="#">Bath Curtains & Mats</a></li>
+            <li><a href="#">Bathroom Organisers</a></li>
+            <li><a href="#">Laundry Baskets & Dryers</a></li>
+            <li><a href="#">Holders & More</a></li>
+        </ul>
+    </div>
+        <div class="megamenu-item" >
+        <h3>KITCHEN</h3>
+        <ul>
+            <li><a href="#">Cookware & Cutlery</a></li>
+            <li><a href="#">Bakeware</a></li>
+            <li><a href="#">Kichen Tools</a></li>
+            <li><a href="#">Kitchen Aprons,Gloves & Towel</a></li>
+            <li><a href="#">Kitchen Organisers</a></li>
+        </ul>
+    </div>
+        <div class="megamenu-item" >
+        <h3>DINING</h3>
+        <ul>
+            <li><a href="#">Serveware & Drinkware</a></li>
+            <li><a href="#">Table Linen Sets</a></li>
+            <li><a href="#">Table Covers & Runners</a></li>
+            <li><a href="#">Table Napkins</a></li>
+            <li><a href="#">Placemats & Coasters</a></li>
+        </ul>
+    </div>
+</div>
+</li> -->

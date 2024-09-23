@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajio-Clone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      .shaddow {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+      }
+      header {
+        width: 100%;
+        height: 90px;
+        background-color: white;
+        position: fixed;
+        top: 0px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        width: 90%;
+        height: 55px;
+        margin-left: 5%;
+      }
+      #logo {
+        width: 130px;
+        height: 38px;
+        margin-bottom: 10px;
+      }
+      .menu > ul {
+        margin-left: 150px;
+      }
+      ul {
+        list-style-type: none;
+        display: flex;
+        font-family: "Source Code Pro", monospace;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        padding: 0px 16px;
+      }
+
+      a:hover {
+        font-weight: 700;
+      }
+      #search {
+        border: none;
+        font-size: 14px;
+      }
+      .search {
+        align-items: center;
+        border: 1px solid rgb(127, 127, 127);
+        border-radius: 17px;
+        background-color: rgb(255, 253, 237);
+        height: 34px;
+        width: 270px;
+        display: flex;
+        justify-content: space-around;
+        margin-left: 0px;
+      }
+      .icons {
+        margin-left: 15px;
+        color: rgb(255, 255, 255);
+        background-color: #2c4152;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .icon{ 
+         display: flex;
+      }
+
+      i {
+        padding: 7px;
+        color: rgb(105, 105, 105);
+      }
+      .upper {
+        width: 90%;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+      #blackupper {
+        color: white;
+        background-color: black;
+        height: 10px;
+      }
+      /* main section */
+      .top {
+        margin: 93px;
+        width: 100vw;
+      }
+      section {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgb(245, 248, 249);
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+      .item {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 24%;
+        transition: transform 0.6s;
+      }
+
+      .item:hover {
+        transform: scale(1.04);
+      }
+
+      img {
+        height: 400px;
+        width: 100%;
+      }
+
+      h3 {
+        margin-top: 15px;
+        font-size: 20px;
+        text-align: center;
+        color: rgb(151, 35, 201);
+      }
+      span {
+        margin-top: 5px;
+        font-size: 20px;
+        color: rgb(5, 109, 17);
+        display: block;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: rgb(7, 11, 31);
+        display: block;
+        text-align: center;
+      }
+
+      .banner1 {
+        margin-top: 90px;
+      }
+      #banner,
+      .banner {
+        display: block;
+        width: 100%;
+        height: 390px;
+        background-color: rgb(245, 248, 249);
+      }
+      #bannerbottom,
+      .bannerbottom {
+        display: block;
+        width: 100%;
+        height: 95px;
+        background-color: rgb(245, 248, 249);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="shaddow">
+      <div class="upper">
+        <ul id="upperul">
+          <li><a href="">Sign In / Join AJIO</a></li>
+          <li><a href="">Customer Care</a></li>
+          <li><a href="" id="blackupper">Visit AJIUOLUXE</a></li>
+        </ul>
+      </div>
+      <nav>
+        <div class="logo">
+          <img
+            id="logo"
+            src="/Day_14/Assignment/image/Ajio-Logo.svg"
+            alt="Logo"
+          />
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">MEN</a></li>
+            <li><a href="#">WOMEN</a></li>
+            <li><a href="#">KIDS</a></li>
+            <li><a href="#">BEAUTY</a></li>
+            <li><a href="#">HOME AND KITCHEN</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search AJIO"
+          />
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="icon">
+          <span><i class="fa-solid fa-heart icons"></i></span>
+          <span><i class="fa-solid fa-bag-shopping icons"></i></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <section class="banner1 shaddow">
+            <img src="/Images/Ajio/top.avif" alt="" id="banner" />
+          </section>
+          <section>
+      <section>
+        <div class="container shaddow">
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img6.jpeg" alt="" />
+            <h3>MEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 44% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img2.jpeg" alt="" />
+            <h3>WOMEN</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 50% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img3.jpeg" alt="" />
+            <h3>WATCH</h3>
+            <span><strong>Starting at ₹999</strong></span>
+            <p><strong>Min 45% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img4.jpeg" alt="" />
+            <h3>MOBILE</h3>
+            <span><strong>Starting at ₹5999</strong></span>
+            <p><strong>Min 19% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img5.jpeg" alt="" />
+            <h3>KITCHEN</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img7.jpeg" alt="" />
+            <h3>KIDS</h3>
+            <span><strong>Starting at ₹699</strong></span>
+            <p><strong>Min 25% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img8.jpeg" alt="" />
+            <h3>BEUTY PRODUCT</h3>
+            <span><strong>Starting at ₹59</strong></span>
+            <p><strong>Min 35% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img9.jpeg" alt="" />
+            <h3>SHOE</h3>
+            <span><strong>Starting at ₹599</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img12.jpeg" alt="" />
+            <h3>SUN-GLASSES</h3>
+            <span><strong>Starting at ₹299</strong></span>
+            <p><strong>Min 70% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img10.jpeg" alt="" />
+            <h3>STATIONARY</h3>
+            <span><strong>Starting at ₹99</strong></span>
+            <p><strong>Min 40% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img13.jpeg" alt="" />
+            <h3>LAPTOP</h3>
+            <span><strong>Starting at ₹25,999</strong></span>
+            <p><strong>Min 30% OFF</strong></p>
+          </div>
+          <div class="item shaddow">
+            <img src="/Images/Ajio/img14.jpeg" alt="" />
+            <h3>GYM ESSENTIALS</h3>
+            <span><strong>Starting at ₹399</strong></span>
+            <p><strong>Min 40% OFF</strong></p>
+          </div>
+        </div>
+      </section>
+      <section class="banner shaddow">
+        <img src="/Images/Ajio/bottom.avif" alt="" id="banner" />
+      </section>
+      <section class="bannerbottom shaddow">
+        <img src="/Images/Ajio/bottom1.webp" alt="" id="bannerbottom" />
+      </section>
+    </main>
+  </body>
+</html>
