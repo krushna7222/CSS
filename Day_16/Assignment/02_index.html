@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Template</title>
+    <style>
+      .container {
+        height: 90vh;
+        width: 90vw;
+        background-color: chartreuse;
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .item {
+        border: 1px solid rgb(255, 0, 0);
+        background-color: aqua;
+      }
+      .Content-3 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+      .Content-4 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: chocolate;
+      }
+      .outer {
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .sub-item {
+        border: 1px solid rgb(76, 0, 255);
+        background-color: rgb(0, 255, 55);
+      }
+      .Sub-Content-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        background-color: rgb(170, 255, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item Content-1">Content-1</div>
+      <div class="item">Content-2</div>
+      <div class="item Content-3">Content-3</div>
+      <div class="item Content-4 outer">
+        <div class="sub-item Sub-Content-1">Sub-Content-1</div>
+        <div class="sub-item">Sub-Content-2</div>
+        <div class="sub-item">Sub-Content-3</div>
+      </div>
+    </div>
+  </body>
+</html>
