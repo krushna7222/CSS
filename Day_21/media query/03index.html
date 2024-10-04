@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Query</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 100vw;
+        height: 100vh;
+        border: 3px solid black;
+        background-color: rgb(255, 0, 149);
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+      .child {
+        margin: 8px;
+        background-color: #3ff742;
+        border: 1px solid blue;
+      }
+      #header,
+      #footer {
+        background-color: rgb(193, 248, 64);
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      @media screen and (max-width: 700px) {
+        .parent {
+          width: 100vw;
+          height: 100vh;
+          border: 3px solid black;
+          background-color: rgb(255, 0, 149);
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr 1fr;
+          grid-template-columns: 1fr;
+        }
+        #header,
+        #footer {
+          background-color: rgb(193, 248, 64);
+          grid-column-start: 1;
+          grid-column-end: 2;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child" id="header">Header</div>
+      <div class="child">Content</div>
+      <div class="child">Content</div>
+      <div class="child" id="footer">Footer</div>
+    </div>
+  </body>
+</html>

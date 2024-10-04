@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Media Query</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      @media screen and (max-width: 300px) {
+        h1 {
+          font-size: 20px;
+          color: chartreuse;
+          text-align: center;
+        }
+        .item {
+          color: red;
+          background-color: aqua;
+          font-size: 10px;
+        }
+      }
+
+      @media screen and (min-width: 301px) and (max-width: 900px) {
+        h1 {
+          font-size: 30px;
+          color: rgb(234, 255, 0);
+          text-align: center;
+        }
+        .item {
+          font-size: 14px;
+          color: darkblue;
+          background-color: chocolate;
+        }
+      }
+
+      @media screen and (min-width: 901px) and (max-width: 1600px) {
+        h1 {
+          font-size: 40px;
+          color: rgb(255, 0, 0);
+          text-align: center;
+        }
+        .item {
+          font-size: 20px;
+          color: rgb(87, 1, 215);
+          background-color: rgb(192, 210, 30);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>CSS Media Query</h1>
+
+      <div class="item">
+        The @media rule, introduced in CSS2, made it possible to define
+        different style rules for different media types. Media queries in CSS3
+        extended the CSS2 media types idea: Instead of looking for a type of
+        device, they look at the capability of the device. Media queries can be
+        used to check many things, such as: width and height of the viewport
+        orientation of the viewport (landscape or portrait) resolution
+      </div>
+    </div>
+  </body>
+</html>
